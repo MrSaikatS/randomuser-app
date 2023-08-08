@@ -15,7 +15,12 @@ const UserCard = ({ info }: { info: UserType }) => {
       <Card className='max-w-sm m-2'>
         <CardBody>
           <div className='flex flex-col items-center justify-center gap-4 pb-5'>
-            <Avatar src={info.picture.large} className='w-32 h-32 text-large' />
+            <Avatar
+              isBordered
+              color='primary'
+              src={info.picture.large}
+              className='w-32 h-32 text-large'
+            />
             <span className='text-3xl font-bold'>
               {info.name.title} {info.name.first} {info.name.last}
             </span>
@@ -23,7 +28,7 @@ const UserCard = ({ info }: { info: UserType }) => {
 
           <Divider />
 
-          <div className='pt-5 space-y-4 w-[19rem] font-bold capitalize'>
+          <div className='pt-5 space-y-5 w-[19rem] font-bold capitalize'>
             <div className='flex items-center gap-4'>
               <UsersIcon className='h-7 w-7' />
               <span className='text-xl'>{info.gender}</span>

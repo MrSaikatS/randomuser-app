@@ -1,13 +1,4 @@
-// import { Card, CardBody, Link } from "@nextui-org/react";
-
-import {
-  Button,
-  Link,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-} from "@nextui-org/react";
+import { Link, Navbar } from "@nextui-org/react";
 
 const Footer = () => {
   return (
@@ -23,14 +14,6 @@ const Footer = () => {
           </Link>
         </div>
       </Navbar>
-      {/* <Card className='justify-center'>
-        <CardBody className=''>
-          
-          <Link href='https://randomuser.me' className='text-center'>
-            https://randomuser.me
-          </Link>
-        </CardBody>
-      </Card> */}
     </>
   );
 };

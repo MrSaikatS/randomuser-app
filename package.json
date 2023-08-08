@@ -1,6 +1,5 @@
 {
   "name": "randomuser-app",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.18",
+    "@heroicons/react": "2.0.18",
     "@nextui-org/react": "2.0.7",
     "@tanstack/react-query": "4.32.6",
     "@types/node": "20.4.8",
@@ -20,6 +19,7 @@
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "0.32.4",
     "typescript": "5.1.6"
   },
   "devDependencies": {

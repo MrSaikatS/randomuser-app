@@ -14,7 +14,7 @@ const LoadingComp = () => {
         <CardBody>
           <div className='flex flex-col items-center justify-center gap-4 pb-5'>
             <Skeleton className='rounded-full'>
-              <div className='w-20 h-20 text-large'></div>
+              <div className='w-32 h-32 text-large'></div>
             </Skeleton>
 
             <Skeleton className='rounded-lg'>
@@ -25,7 +25,7 @@ const LoadingComp = () => {
           {/* <Skeleton className='rounded-lg'></Skeleton> */}
           <Divider />
 
-          <div className='pt-5 space-y-4 w-[19rem] font-bold capitalize'>
+          <div className='pt-5 space-y-5 w-[19rem] font-bold capitalize'>
             <div className='flex items-center gap-4'>
               <Skeleton className='rounded-lg'>
                 <UsersIcon className='h-7 w-7' />

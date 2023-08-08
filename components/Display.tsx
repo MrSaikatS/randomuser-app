@@ -1,9 +1,14 @@
+import RefetchAtom from "@/utils/RefetchAtom";
 import LoadingComp from "./LoadingComp";
 import UserCard from "./UserCard";
 import { useQuery } from "@tanstack/react-query";
+import { useAtom } from "jotai";
+import { useEffect, useLayoutEffect } from "react";
 
 const Display = () => {
-  const { data, isLoading } = useQuery({
+  const [load, setLoad] = useAtom(RefetchAtom);
+
+  const { data, isLoading, isFetching, isFetched, isSuccess } = useQuery({
     queryKey: ["users"],
 
     queryFn: async () => {
@@ -17,22 +22,44 @@ const Display = () => {
 
       return data;
     },
+
+    refetchOnWindowFocus: false,
+
+    retry: true,
   });
 
-  if (isLoading) {
-    return <LoadingComp />;
+  useLayoutEffect(() => {
+    if (isLoading || isFetching) {
+      setLoad(true);
+    } else {
+      setLoad(false);
+    }
+  }, [isLoading, isFetching]);
+
+  if (isLoading || isFetching) {
+    return (
+      <>
+        <div className='flex justify-center items-center h-[86dvh]'>
+          <div className=''>
+            <LoadingComp />
+          </div>
+        </div>
+      </>
+    );
   }
 
-  return (
-    <>
-      <div className='flex justify-center items-center h-[86dvh]'>
-        <div className=''>
-          <UserCard info={data} />
-          {/* <LoadingComp /> */}
+  if (isFetched && isSuccess) {
+    return (
+      <>
+        <div className='flex justify-center items-center h-[86dvh]'>
+          <div className=''>
+            <UserCard info={data} />
+            {/* <LoadingComp /> */}
+          </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default Display;

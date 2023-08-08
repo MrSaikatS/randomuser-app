@@ -1,11 +1,11 @@
 import {
-  Button,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
 import ThemeSwitch from "./ThemeSwitch";
+import RefetchButton from "./RefetchButton";
 
 const Nav = () => {
   return (
@@ -21,9 +21,7 @@ const Nav = () => {
           </NavbarItem>
 
           <NavbarItem>
-            <Button color='primary' variant='flat'>
-              Refresh
-            </Button>
+            <RefetchButton />
           </NavbarItem>
         </NavbarContent>
       </Navbar>

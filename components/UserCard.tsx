@@ -15,8 +15,10 @@ const UserCard = ({ info }: { info: UserType }) => {
       <Card className='max-w-sm m-2'>
         <CardBody>
           <div className='flex flex-col items-center justify-center gap-4 pb-5'>
-            <Avatar src={info.picture.large} className='w-20 h-20 text-large' />
-            <span className='text-4xl font-bold'>Mr Evan Nguyen</span>
+            <Avatar src={info.picture.large} className='w-32 h-32 text-large' />
+            <span className='text-3xl font-bold'>
+              {info.name.title} {info.name.first} {info.name.last}
+            </span>
           </div>
 
           <Divider />
@@ -24,29 +26,31 @@ const UserCard = ({ info }: { info: UserType }) => {
           <div className='pt-5 space-y-4 w-[19rem] font-bold capitalize'>
             <div className='flex items-center gap-4'>
               <UsersIcon className='h-7 w-7' />
-              <span className='text-xl'>Male</span>
+              <span className='text-xl'>{info.gender}</span>
             </div>
 
             <div className='flex items-center gap-4'>
               <ClockIcon className='h-7 w-7' />
-              <span className='text-xl'>35 years</span>
+              <span className='text-xl'>{info.dob.age} years</span>
             </div>
 
             <div className='flex items-center gap-3'>
               <InboxIcon className='h-7 w-7 min-w-[2rem]' />
               <span className='text-xl overflow-y-auto lowercase'>
-                evan.nguyen@example.comdsdasdasdsd
+                {info.email}
               </span>
             </div>
 
             <div className='flex items-center gap-4'>
               <MapPinIcon className='h-7 w-7' />
-              <span className='text-xl'>city , state</span>
+              <span className='text-xl'>
+                {info.location.city}, {info.location.state}
+              </span>
             </div>
 
             <div className='flex items-center gap-4'>
               <GlobeAsiaAustraliaIcon className='h-7 w-7' />
-              <span className='text-xl'>country</span>
+              <span className='text-xl'>{info.location.country}</span>
             </div>
           </div>
         </CardBody>

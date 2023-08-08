@@ -18,7 +18,7 @@ const LoadingComp = () => {
             </Skeleton>
 
             <Skeleton className='rounded-lg'>
-              <span className='text-4xl font-bold'>Mr Evan Nguyen</span>
+              <span className='text-3xl font-bold'>Mr Evan Nguyen</span>
             </Skeleton>
           </div>
 

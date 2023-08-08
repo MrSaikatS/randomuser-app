@@ -28,8 +28,6 @@ export type UserType = {
     date: string;
     age: number;
   };
-  phone: string;
-  cell: string;
   picture: {
     large: string;
     medium: string;

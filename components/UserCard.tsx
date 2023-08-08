@@ -9,16 +9,13 @@ import {
 } from "@heroicons/react/24/solid";
 import type { UserType } from "../utils/UserType";
 
-const UserCard = () => {
+const UserCard = ({ info }: { info: UserType }) => {
   return (
     <>
       <Card className='max-w-sm m-2'>
         <CardBody>
-          <div className='flex flex-col items-center justify-center gap-2 pb-5'>
-            <Avatar
-              src='https://i.pravatar.cc/150?u=a04258114e29026708c'
-              className='w-20 h-20 text-large'
-            />
+          <div className='flex flex-col items-center justify-center gap-4 pb-5'>
+            <Avatar src={info.picture.large} className='w-20 h-20 text-large' />
             <span className='text-4xl font-bold'>Mr Evan Nguyen</span>
           </div>
 

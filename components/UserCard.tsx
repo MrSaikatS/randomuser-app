@@ -24,7 +24,7 @@ const UserCard = () => {
 
           <Divider />
 
-          <div className='pt-5 space-y-4 w-[19rem] font-bold'>
+          <div className='pt-5 space-y-4 w-[19rem] font-bold capitalize'>
             <div className='flex items-center gap-4'>
               <UsersIcon className='h-7 w-7' />
               <span className='text-xl'>Male</span>
@@ -35,9 +35,11 @@ const UserCard = () => {
               <span className='text-xl'>35 years</span>
             </div>
 
-            <div className='flex items-center gap-4'>
-              <InboxIcon className='h-7 w-7' />
-              <span className='text-xl'>evan.nguyen@example.com</span>
+            <div className='flex items-center gap-3'>
+              <InboxIcon className='h-7 w-7 min-w-[2rem]' />
+              <span className='text-xl overflow-y-auto lowercase'>
+                evan.nguyen@example.comdsdasdasdsd
+              </span>
             </div>
 
             <div className='flex items-center gap-4'>

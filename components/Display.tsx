@@ -3,7 +3,7 @@ import LoadingComp from "./LoadingComp";
 import UserCard from "./UserCard";
 import { useQuery } from "@tanstack/react-query";
 import { useAtom } from "jotai";
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 
 const Display = () => {
   const [load, setLoad] = useAtom(RefetchAtom);

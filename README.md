@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aaad4e17-a127-43fe-a480-1a592a4b6689/deploy-status)](https://app.netlify.com/sites/randomuser-citapp/deploys)
 
 ## Getting Started
 

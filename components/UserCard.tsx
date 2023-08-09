@@ -1,4 +1,5 @@
 // Explicitly use import type
+import type { UserType } from "../utils/UserType";
 import { Avatar, Card, CardBody, Divider } from "@nextui-org/react";
 import {
   UsersIcon,
@@ -7,7 +8,6 @@ import {
   MapPinIcon,
   GlobeAsiaAustraliaIcon,
 } from "@heroicons/react/24/solid";
-import type { UserType } from "../utils/UserType";
 
 const UserCard = ({ info }: { info: UserType }) => {
   return (

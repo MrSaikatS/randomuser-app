@@ -3,7 +3,7 @@ import LoadingComp from "./LoadingComp";
 import UserCard from "./UserCard";
 import { useQuery } from "@tanstack/react-query";
 import { useAtom } from "jotai";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 const Display = () => {
   const [load, setLoad] = useAtom(RefetchAtom);
@@ -13,7 +13,7 @@ const Display = () => {
 
     queryFn: async () => {
       const req = await fetch(
-        `https://randomuser.me/api/1.4/?nat=AU,CA,DE,FR,GB,IE,IN,NZ,US&exc=login,registered,id,cell,phone,nat&noinfo`
+        `https://randomuser.me/api/?nat=AU,CA,DE,FR,GB,IE,IN,NZ,US&exc=login,registered,id,cell,phone,nat&noinfo`,
       );
 
       const res = await req.json();
@@ -28,7 +28,7 @@ const Display = () => {
     retry: true,
   });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isLoading || isFetching) {
       setLoad(true);
     } else {
@@ -39,8 +39,8 @@ const Display = () => {
   if (isLoading || isFetching) {
     return (
       <>
-        <div className='flex justify-center items-center h-[86dvh]'>
-          <div className=''>
+        <div className="flex h-[86dvh] items-center justify-center">
+          <div className="">
             <LoadingComp />
           </div>
         </div>
@@ -51,8 +51,8 @@ const Display = () => {
   if (isFetched && isSuccess) {
     return (
       <>
-        <div className='flex justify-center items-center h-[86dvh]'>
-          <div className=''>
+        <div className="flex h-[86dvh] items-center justify-center">
+          <div className="">
             <UserCard info={data} />
             {/* <LoadingComp /> */}
           </div>

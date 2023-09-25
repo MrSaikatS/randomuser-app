@@ -9,7 +9,7 @@ const ThemeSwitch = () => {
   return (
     <>
       <Switch
-        size='lg'
+        size="lg"
         startContent={<SunIcon />}
         endContent={<MoonIcon />}
         isSelected={theme}

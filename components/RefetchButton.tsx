@@ -16,7 +16,7 @@ const RefetchButton = () => {
 
   return (
     <>
-      <Button color='primary' isLoading={load} onPress={refetchHandler}>
+      <Button color="primary" isLoading={load} onPress={refetchHandler}>
         <span className={` ${load ? "hidden" : ""}`}>Refetch</span>
       </Button>
     </>

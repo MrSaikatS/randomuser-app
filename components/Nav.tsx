@@ -10,12 +10,12 @@ import RefetchButton from "./RefetchButton";
 const Nav = () => {
   return (
     <>
-      <Navbar isBordered className='h-[7dvh]'>
+      <Navbar isBordered className="h-[7dvh]">
         <NavbarBrand>
-          <p className='font-bold text-inherit'>RandomUser</p>
+          <p className="font-bold text-inherit">RandomUser</p>
         </NavbarBrand>
 
-        <NavbarContent justify='end'>
+        <NavbarContent justify="end">
           <NavbarItem>
             <ThemeSwitch />
           </NavbarItem>

@@ -12,6 +12,8 @@ const Display = () => {
     queryKey: ["users"],
 
     queryFn: async () => {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       const req = await fetch(
         `https://randomuser.me/api/?nat=AU,CA,DE,FR,GB,IE,IN,NZ,US&exc=login,registered,id,cell,phone,nat&noinfo`,
       );

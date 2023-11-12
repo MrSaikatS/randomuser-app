@@ -2,13 +2,14 @@ import Display from "@/components/Display";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import ThemeAtom from "@/utils/ThemeAtom";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useAtom } from "jotai";
+import Head from "next/head";
 
 const index = () => {
   const [theme, setTheme] = useAtom(ThemeAtom);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (theme) {
       document.documentElement.classList.add("dark");
     } else {
@@ -18,6 +19,10 @@ const index = () => {
 
   return (
     <>
+      <Head>
+        <title>RandomUser | CIT</title>
+      </Head>
+
       <Nav />
 
       <Display />
